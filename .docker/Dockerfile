@@ -69,7 +69,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # User Permission
 RUN useradd -G www-data,root -u $uid -d /home/$user $user
-RUN usermod -aG root www-data
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
 

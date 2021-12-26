@@ -20,7 +20,7 @@ services:
   app:
     build:
       args:
-        user: www-data
+        user: www
         uid: 1000
       context: ./
       dockerfile: ./.docker/Dockerfile
